@@ -1,6 +1,4 @@
-# React Template
-Template for a React Starter Application (with Bootstrap) appropriated from 
-Jason Seminara's [React To Do Application](https://github.com/jasonseminara/react_to-do)
+# PERN Single Page Application Template
 
 ## What's in the box?
 - Template to get started on a PERN stack Single Page Application (PostgreSQL, Express, React.js, Node.js)
@@ -21,3 +19,6 @@ $ npm run watch
 ```
 $ npm start
 ```
+
+### Special Thanks
+Webpack configuration inspired by Jason Seminara's [React To Do Application](https://github.com/jasonseminara/react_to-do)
