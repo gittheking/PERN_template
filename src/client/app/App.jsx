@@ -2,10 +2,6 @@
 import React            from 'react'
 import ReactDOM         from 'react-dom'
 
-import ajax             from '../helpers/ajaxAdapter.js'
-import util             from '../helpers/util.js'
-
-
 // create a React Component called _App_
 export default class App extends React.Component{
 
