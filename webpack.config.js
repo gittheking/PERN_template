@@ -9,7 +9,7 @@ const APP_DIR           = path.resolve(__dirname, 'src/client/app');
 
 
 module.exports = {
-  entry: `${APP_DIR}/main.jsx`,
+  entry: `${APP_DIR}/main.js`,
   output: {
     path: BUILD_DIR,
     filename: '/js/[name].js',
