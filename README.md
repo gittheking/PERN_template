@@ -21,4 +21,4 @@ $ npm start
 ```
 
 ### Special Thanks
-Webpack configuration inspired by Jason Seminara's [React To Do Application](https://github.com/jasonseminara/react_to-do)
+Webpack configuration inspired by [Jason Seminara](@jasonseminara)'s [React To Do Application](https://github.com/jasonseminara/react_to-do)
