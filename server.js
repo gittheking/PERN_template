@@ -1,5 +1,5 @@
 'use strict'
-require('dotenv').config();
+require('dotenv').config({ silent: true });
 const express = require('express');
 const logger  = require('morgan');
 const path    = require('path');
