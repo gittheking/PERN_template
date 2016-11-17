@@ -1,1 +1,0 @@
-// Put some ajax helpers here 

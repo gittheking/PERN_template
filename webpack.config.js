@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const BUILD_DIR         = path.resolve(__dirname, 'dist');
-const APP_DIR           = path.resolve(__dirname, 'src/client/app');
+const APP_DIR           = path.resolve(__dirname, 'src');
 
 
 module.exports = {
@@ -23,11 +23,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Pi Dashboard',
+      title: 'ReactJS Hello World',
       xhtml: true,
       inject: false,
       template: require('html-webpack-template'),
-      appMountId: 'container'
+      appMountId: 'root-container'
     }),
     new ExtractTextPlugin('/css/[name].css', {
       allChunks: true
@@ -37,11 +37,25 @@ module.exports = {
   module : {
     include: path.join(__dirname, 'src'),
     loaders: [
-      { test: /\.css$/,  loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]') },
-      { test: /\.svg$/,  loader: 'file-loader?name=/img/[name].[ext]' },
-      { test: /\.gif$/,  loader: 'file-loader' },
-      { test: /\.jpg$/,  loader: 'file-loader' },
-      { test: /\.jsx?$/, loader: 'babel'       },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+      },
+      {
+        test: /\.svg$/,
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
+      },
+      {
+        test: /\.gif$/,
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
+      },
+      { test: /\.jpg$/,
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
+      },
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel'
+      },
       {
         test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader?name=/fonts/[name].[ext]'
